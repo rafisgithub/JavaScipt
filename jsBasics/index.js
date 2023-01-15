@@ -66,3 +66,18 @@ function square(n){
     return n*n;
 }
  console.log (square (3));
+
+ let x=20;
+ let y=10;
+ let sum;
+ let multiplication;
+ let division;
+ let subtracton;
+ sum=x+y;
+ multiplication=x*y;
+ division=x/y;
+ subtracton=x-y;
+ console.log(sum);
+ console.log(division);
+ console.log(multiplication);
+ console.log(subtracton);
