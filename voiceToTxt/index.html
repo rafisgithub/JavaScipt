@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice to Text</title>
+  </head>
+  <body>
+    <h1>Voice to Text</h1>
+    <p>Click the "Start" button and start speaking. Click the "Stop" button to stop.</p>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn" disabled>Stop</button>
+    <p id="result"></p>
+    <form>
+      <label for="text-input">Result:</label>
+      <textarea type="text" id="text-input" name="text-input" disabled></textarea>
+      <button type="submit" id="submit-btn" disabled>Submit</button>
+    </form>
+
+    <script>
+      const startBtn = document.getElementById('start-btn');
+      const stopBtn = document.getElementById('stop-btn');
+      const result = document.getElementById('result');
+      const textInput = document.getElementById('text-input');
+      const submitBtn = document.getElementById('submit-btn');
+      const recognition = new webkitSpeechRecognition();
+
+      recognition.lang = 'en-US';
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      startBtn.addEventListener('click', function() {
+        recognition.start();
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+        textInput.disabled = true;
+        submitBtn.disabled = true;
+        result.innerHTML = '';
+      });
+
+      stopBtn.addEventListener('click', function() {
+        recognition.stop();
+        stopBtn.disabled = true;
+        startBtn.disabled = false;
+        textInput.disabled = false;
+        submitBtn.disabled = false;
+      });
+
+      recognition.onresult = function(event) {
+        const transcript = event.results[event.results.length - 1][0].transcript;
+        result.innerHTML += transcript;
+        textInput.value = result.innerText.trim();
+      };
+
+      recognition.onend = function() {
+        stopBtn.disabled = true;
+        startBtn.disabled = false;
+        textInput.disabled = false;
+        submitBtn.disabled = false;
+      };
+      
+      submitBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        const text = textInput.value;
+        // submit the text to a server using AJAX or fetch API
+        console.log(`Submitting text: ${text}`);
+      });
+    </script>
+  </body>
+</html>

@@ -7,9 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello wold</h1>
+    <h1>to check date and time</h1>
 
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">show date and time</button>
 
-    <script src="index.js"></script>
+    <h1 id="demo"></h1>
+
+    <p id="txt"></p>
+
+    <img id="myImage" src="./images/pic_bulboff.gif" alt="" width="100" height="180" >
+   <button type="button" onclick="light(1)">Turn on</button>
+   <button type="button" onclick="light(0)">Turn off</button>
+
+    <script>
+
+        function light(x){
+            var pic;
+            if(x==1){
+                pic = "./images/pic_bulbon.gif";
+            }else{
+                pic = "./images/pic_bulboff.gif";
+            }
+
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
 </body>
 </html>

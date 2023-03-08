@@ -1,0 +1,119 @@
+
+      .clock {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #f7f7f7;
+        position: relative;
+        margin: 50px auto;
+      }
+      .hour-hand, .minute-hand, .second-hand {
+        background: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: bottom center;
+      }
+      .hour-hand {
+        width: 5px;
+        height: 50px;
+        margin-left: -2.5px;
+        z-index: 3;
+      }
+      .minute-hand {
+        width: 3px;
+        height: 80px;
+        margin-left: -1.5px;
+        z-index: 2;
+      }
+      .second-hand {
+        width: 1px;
+        height: 100px;
+        margin-left: -0.5px;
+        z-index: 1;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -5px;
+        margin-left: -5px;
+        z-index: 4;
+      }
+ 
+      .clock div {
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      }
+
+      .clock:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid black;
+      }
+      
+
+      .clock:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid black;
+      }
+      .numbers {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .number {
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .number1 { transform: rotate(30deg) translateX(90px); }
+      .number2 { transform: rotate(60deg) translateX(90px); }
+      .number3 { transform: rotate(90deg) translateX(90px); }
+      .number4 { transform: rotate(120deg) translateX(90px); }
+      .number5 { transform: rotate(150deg) translateX(90px); }
+      .number6 { transform: rotate(180deg) translateX(90px); }
+      .number7 { transform: rotate(210deg) translateX(90px); }
+      .number8 { transform: rotate(240deg) translateX(90px); }
+      .number9 { transform: rotate(270deg) translateX(90px); }
+      .number10 { transform: rotate(300deg) translateX(90px); }
+      .number11 { transform: rotate(330deg) translateX(90px); }
+      .number12 { transform: rotate(0deg) translateX(90px); }
+      .clock:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid black;
+        z-index: -1;
+      }
+      .clock .tick {
+        position: absolute;
+        width: 4px;
+        height: 15px;
+        background-color: black;
+        top: 5%;
+        left: 48%;
+        transform-origin: bottom
+      }
