@@ -4,33 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lerning JavaScript</title>
 </head>
 <body>
-    <h1>to check date and time</h1>
+    <h1>JavaScript</h1>
 
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">show date and time</button>
+    <div id="firstContainer" class="container">
+        <button id="click">Click me</button>
+    </div>
 
-    <h1 id="demo"></h1>
+    <div class="container">
+        <p>This is a paragraph</p>
+    </div>
 
-    <p id="txt"></p>
-
-    <img id="myImage" src="./images/pic_bulboff.gif" alt="" width="100" height="180" >
-   <button type="button" onclick="light(1)">Turn on</button>
-   <button type="button" onclick="light(0)">Turn off</button>
-
-    <script>
-
-        function light(x){
-            var pic;
-            if(x==1){
-                pic = "./images/pic_bulbon.gif";
-            }else{
-                pic = "./images/pic_bulboff.gif";
-            }
-
-            document.getElementById('myImage').src = pic;
-        }
-    </script>
+  <script src="index.js"></script>
 </body>
 </html>

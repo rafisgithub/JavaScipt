@@ -1,83 +1,91 @@
-//This is my first javascript code
-// console.log('Hello world');
-// let name='Rafi';
-// console.log(name);
+// //1.Ways to print in JavaScript
+// console.log('Hello JavaScript', 10 + 12, "Rafi ahmed");
+// // alert("How are you?");
+// document.write("Hey this is documnet");
 
-//Declaring variable 
-//cant't be a reserved keyword
-//should be meaningful
-//cant't start with a number 
-// can't cantain a space or hyphen(-)
-// let firstName = 'Rafi ';
-// let latName = 'Ahmed';
-// console.log(firstName)
-// console.log(latName);
+// //2.JavaScript console API
+// console.log("How are you?")
+// console.warn("this is warning");
+// console.error("this is an error!");
+// console.clear();
+// console.table(data) //Heere data array or object to be displayed in a table.
+// console.assert();
+// console.trace();
 
-// let age = 25;
-// let isApproved = true;
-// let x = undefined;
-// let y = null;
+//.3 varibales
 
-//Object array and Fucntion
+var number1 = 20;
+var number2 = 23;
 
+// console.log(number1+number2);
 
-//Object
-let name = 'Rafi Ahmed';
-let rage = 21;
-let person = {
-    name: 'Rafi Ahmed',
-    rage:21
-};
+// 4. Data types in JavaScript
+//numbers
+var n1 = 32;
+var n2 = 23.43;
+//string
+var str1 = "This is a string";
+var str2 = 'this is a string';
 
-
-//Dot Notaions
-person.name = 'Oyasick';
-
-
-//Bracket Notation
-person['name'] = 'Ahmed';
-
-let selection = 'name';
-person[selection]= 'Shakib';
-
-console.log(person);
-
-
-   //Array
-
-let SelecttedColor = ['red', 'blue'];
-SelecttedColor[2]= 'green';
-console.log(SelecttedColor);
-console.log(SelecttedColor[0]);
-
-
-
-    //    Function 
-
-function greet(name,x,y) {
-    console.log('Hello ' + name ,x ,y);
+//Objects
+var marks = {
+    rafi:90,
+    shakib:80,
+    harry:10
 }
+// console.log(marks)
 
-greet('Rafi Ahmed',20,40);
+//Bolean
+
+var x=true;
+var y = false;
+
+// console.log(x,y)
+
+
+// var und = undefined;
+var und;
+// console.log(und)
+
+
+var n = null;
+// console.log(n)
+
+
+/*At a very hight level, There are two type of data type in JavaScript
+
+1. Primitive data types :  undefined, null, number, string , boolean, Symbol
+2. Reference data types : Arrays and Objects
+
+*/
+
+var arr = [1,2,3,4,5,6,"Rafi",'ahmed']
 
 
 
-function square(n){
-    return n*n;
-}
- console.log (square (3));
+//Operator in javaScript
 
- let x=20;
- let y=10;
- let sum;
- let multiplication;
- let division;
- let subtracton;
- sum=x+y;
- multiplication=x*y;
- division=x/y;
- subtracton=x-y;
- console.log(sum);
- console.log(division);
- console.log(multiplication);
- console.log(subtracton);
+var a = 100;
+var b = 10;
+
+// console.log("The value of a+b =", a+b )
+// console.log("The value of a-b =", a-b )
+// console.log("The value of a/b =", a/b )
+// console.log("The value of a%b =", a%b )
+
+
+//Assigment operators
+
+var c = b;
+c -= 2;
+// console.log(c);
+//comparision operator
+// console.log(c==a)
+// console.log(c<=a)
+
+//Logical operator
+
+// console.log(true && true)
+// console.log(true && false)
+// console.log(true || true)
+// console.log(true || false)
