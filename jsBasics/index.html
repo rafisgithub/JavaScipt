@@ -5,16 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lerning JavaScript</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            border: 2px solid pink;
+            margin: 3px 0px;
+            background-color: cyan;
+            padding: 9px;
+        }
+
+        .bg-primary{
+            background-color: blueviolet;
+        }
+
+        .text-success{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <h1>JavaScript</h1>
 
     <div id="firstContainer" class="container">
-        <button id="click">Click me</button>
+        <button id="click" onclick="clicked()">Click me</button>
+        <p>This is a paragraph</p>
     </div>
 
     <div class="container">
-        <p>This is a paragraph</p>
+        <p id="paragraph">This is a paragraph</p>
     </div>
 
   <script src="index.js"></script>
