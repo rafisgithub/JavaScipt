@@ -72,7 +72,16 @@ const student3 = {
     attent :true
 }
 const allStudents = [student1,student2,student3];
-// // console.log(allStudents);
+// console.log(allStudents);
+
+// for(let i = 0;i<allStudents.length;i++){
+//    let getEmail =  allStudents[i].email ;
+//    sendEmail(getEmail);
+// }
+
+// function sendEmail(x){
+//     console.log("Send email to ",x)
+// }
 
 // for(let i=0;i<allStudents.length;i++){
  
@@ -144,6 +153,4 @@ const numbers = [23,54,54,56,65,65];
 //     }
     
 // })
-
-let sum = 0;
 
